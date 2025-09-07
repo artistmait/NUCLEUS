@@ -1,16 +1,33 @@
 import { Button } from '@/components/ui/button'
-import { Card, CardHeader } from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card'
 import React from 'react'
+import admin from '../../../assets/admin.jpg'
+import Link from 'next/link'
 
 const AdminCard = () => {
   return (
-   <Card className='shadow-md w-1/2 p-4'>
-    <CardHeader className='flex items-start justify-start text-2xl font-bold'>
-        Admin Office Section
-    </CardHeader>
-    <span className='text-lg font-muted'>Student administrative services, document processing and institutional procedures</span>
-    <Button className='mt-4 bg-[#191265] text-white hover:bg-[#191265] cursor-pointer h-10'>Go to Admin Office Section</Button>
-   </Card>
+      <Card className="shadow-md w-3/4 flex flex-row items-center gap-6 p-6 bg-gray-100">
+      {/* Left side (Image) */}
+      <div className="w-1/3 flex justify-center">
+        <img
+          src={admin.src}
+          alt="Exam Illustration"
+          width={250}
+          height={250}
+        />
+      </div>
+
+      {/* Right side (Text + Button) */}
+      <CardContent className="flex flex-col justify-center w-2/3 ">
+        <h2 className="text-2xl font-bold mb-2">Admin Section</h2>
+        <p className="text-lg text-gray-600 mb-4">
+          Student administrative services, document processing, and institutional procedures
+        </p>
+        <Button asChild className='py-2 w-[300px] bg-[#191265] text-white hover:!bg-[#6BD73D] cursor-pointer h-10'>
+          <Link href="/app/ExamSection/ExamSectionForm/page">Access Section</Link>
+          </Button>
+      </CardContent>
+    </Card>
   )
 }
 
