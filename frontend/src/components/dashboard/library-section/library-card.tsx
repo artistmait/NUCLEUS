@@ -3,13 +3,14 @@ import { Card, CardContent } from '@/components/ui/card'
 import React from 'react'
 import library from '../../../assets/library.jpg'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const LibraryCard = () => {
   return (
       <Card className="shadow-md w-3/4 flex flex-row items-center gap-6 p-6 bg-gray-100">
       {/* Left side (Image) */}
       <div className="w-1/3 flex justify-center">
-        <img
+        <Image
           src={library.src}
           alt="Exam Illustration"
           width={250}

@@ -3,13 +3,14 @@ import { Card, CardContent } from '@/components/ui/card'
 import React from 'react'
 import exam from '../../../assets/exam.jpg'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const ExamCard = () => {
   return (
       <Card className="shadow-md w-3/4 flex flex-row items-center gap-6 p-6 bg-gray-100">
       {/* Left side (Image) */}
       <div className="w-1/3 flex justify-center">
-        <img
+        <Image
           src={exam.src}
           alt="Exam Illustration"
           width={250}
@@ -23,7 +24,7 @@ const ExamCard = () => {
         <p className="text-lg text-gray-600 mb-4">
           Comprehensive examination management including applications, results, and <br/>academic certifications        </p>
         <Button asChild className='py-2 w-[300px] bg-[#191265] text-white hover:!bg-[#6BD73D] cursor-pointer h-10'>
-          <Link href="/app/ExamSection/ExamSectionForm/page">Access Section</Link>
+          <Link href="/exam-application">Access Section</Link>
           </Button>
       </CardContent>
     </Card>
