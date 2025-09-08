@@ -1,6 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono , Kumbh_Sans , Lilita_One } from "next/font/google";
 import "./globals.css";
+
+const lilitaOne = Lilita_One({
+  subsets: ["latin"],
+  weight: "400", // Lilita One only has 400 weight
+  variable: "--font-lilita-one",
+});
+
+const kumbhSans = Kumbh_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // choose weights you need
+  variable: "--font-kumbh-sans",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,13 +34,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+return (
+  <html lang="en">
+    <body
+      className={`${geistSans.variable} ${geistMono.variable} ${kumbhSans.variable} ${lilitaOne.variable} antialiased font-sans`}
+    >
+      {children}
+    </body>
+  </html>
+);
+
 }

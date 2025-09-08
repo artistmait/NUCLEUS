@@ -10,37 +10,70 @@ const Dashboard = () => {
   return (
     <div>
         <Navbar03/>
-        <div className='flex flex-col justify-center items-center gap-10'>
-            <Card className='m-10 p-10 bg-[#191265] text-white shadow-xs w-1/2'>
-               <CardHeader className='text-2xl font-extrabold text-center'>Welcome to NUCLEUS Portal</CardHeader>
-               <div className='flex flex-row gap-4 text-center'>
-                <p className='font-semibold text-xl'>YOUR DIGITAL CAMPUS ASSISTANT</p>
-               </div>
-            </Card>
-            <div className='flex flex-row gap-30 m-10 justify-center items-center'>
-            <Card  className='shadow-md w-1/5 p-4'>
-                <CardHeader className='flex items-center justify-center'>
-                   <RefreshCcwDot className='mr-2 w-auto bg-blue-200 p-2 size-15 rounded-full'/>
-                </CardHeader>
-                <CardContent className='text-center text-2xl font-bold'>Digital Processing</CardContent>  
-                <p className='text-center text-gray-600'>Fast and Secure Online Application Process in Real Time</p>
-            </Card>
-            <Card className='shadow-md w-1/5 p-4'>
-                <CardHeader className='flex items-center justify-center'>
-                   <Verified className='mr-2 w-auto bg-blue-200 p-2 size-15 rounded-full'/>
-                </CardHeader>
-                <CardContent className='text-center text-2xl font-bold'>Verified Documents</CardContent>  
-                <p className='text-center text-gray-600'>Officially Authenticated certificates and transcripts with digital verification</p>
-            </Card>
-            <Card  className='shadow-md w-1/5 p-4'>
-                <CardHeader className='flex items-center justify-center'>
-                   <Clock className='mr-2 w-auto bg-blue-200 p-2 size-15 rounded-full'/>
-                </CardHeader>
-                <CardContent className='text-center text-2xl font-bold'>24/7 Access</CardContent>  
-                <p className='text-center text-gray-600'>Submit Applications anytime and track progress with instant notifications</p>
-            </Card>
-            </div>
-            <Card className='rounded-full w-auto h-20 bg-gray-300'>
+        <div className='flex ml-10 mt-5 text-3xl font-bold gap-10'>
+         Welcome to NUCLEUS Portal
+         </div>
+        <div className='flex flex-col justify-center items-center ml-10 mt-5 text-3xl font-bold gap-10'>
+           
+<div className="relative grid justify-center items-center ml-30 grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl p-8">
+  {/* Left side */}
+  <h1 className="text-4xl md:text-4xl mt-3  font-bold leading-relaxed">
+    Your Digital <br /> Campus <br /> Assistant
+  </h1>
+
+  {/* Right side */}
+  <p className="text-lg mt-3 font-Kumbh font-medium">
+    <span>NUCLEUS</span> — a cloud-native platform that connects
+    departments, streamlines approvals, and keeps you updated in real time for a seamless campus
+    experience.
+  </p>
+</div>
+<div className="flex flex-row gap-10 m-10 justify-center items-stretch">
+  {/* Card 1 */}
+  <Card className="shadow-md w-1/4 flex flex-col justify-between p-6">
+    <div className="flex flex-col items-center text-center flex-grow">
+      <div className="bg-blue-200 p-4 rounded-full mb-4">
+        <Verified className="w-8 h-8 text-black" />
+      </div>
+      <h3 className="text-xl font-bold mb-2">Digital Processing</h3>
+      <p className="text-[15px] font-normal text-gray-600">
+        Fast and secure online application processing with real-time status
+        tracking
+      </p>
+    </div>
+  </Card>
+
+  {/* Card 2 */}
+  <Card className="shadow-md w-1/4 flex flex-col justify-between p-6">
+    <div className="flex flex-col items-center text-center flex-grow">
+      <div className="bg-blue-200 p-4 rounded-full mb-4">
+        <Verified className="w-8 h-8 text-black" />
+      </div>
+      <h3 className="text-xl font-bold mb-2">Verified Documents</h3>
+      <p className="text-[15px] font-normal text-gray-600">
+        Officially authenticated certificates and transcripts with digital
+        verification
+      </p>
+    </div>
+  </Card>
+
+  {/* Card 3 */}
+  <Card className="shadow-md w-1/4 flex flex-col justify-between p-6">
+    <div className="flex flex-col items-center text-center flex-grow">
+      <div className="bg-blue-200 p-4 rounded-full mb-4">
+        <Verified className="w-8 h-8 text-black" />
+      </div>
+      <h3 className="text-xl font-bold mb-2">24/7 Access</h3>
+      <p className="text-[15px] font-normal text-gray-600">
+        Submit applications anytime and track progress with instant
+        notifications
+      </p>
+    </div>
+  </Card>
+</div>
+
+
+            <Card className='rounded-full w-fit items-center h-20 bg-gray-300'>
             <CardContent className='text-center font-bold'>
                 <div className='flex flex-row gap-2 justify-center items-center'>
                  <p className='text-2xl'>Explore Sections</p> <MoveDown className='size-10' />

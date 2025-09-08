@@ -151,12 +151,12 @@ export const Navbar03 = React.forwardRef<HTMLElement, Navbar03Props>(
       <header
         ref={combinedRef}
         className={cn(
-          'sticky top-0 z-50 w-full border-b bg-[#191265]/95 backdrop-blur supports-[backdrop-filter]:bg-[#191265]/10 px-4 md:px-6 [&_*]:no-underline',
+          'sticky top-0 z-50 w-full border-b bg-[#191265]/95 backdrop-blur supports-[backdrop-filter]:bg-[#191265]/10 [&_*]:no-underline',
           className
         )}
         {...props}
       >
-        <div className="container mx-auto flex h-16 max-w-screen-2xl bg-[#191265] p-4 items-center justify-between gap-4 rounded-b-xl">
+        <div className="flex h-20 w-full bg-[#191265] p-8 items-center justify-between gap-4">
           {/* Left side */}
           <div className="flex items-center gap-2">
             {/* Mobile menu trigger */}
@@ -177,7 +177,7 @@ export const Navbar03 = React.forwardRef<HTMLElement, Navbar03Props>(
                       {navigationLinks.map((link, index) => (
                         <NavigationMenuItem key={index} className="w-full">
                           <button
-                            onClick={(e) => e.preventDefault()}
+                            onClick={(e: React.MouseEvent) => e.preventDefault()}
                             className={cn(
                               'flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer no-underline',
                               link.active && 'bg-accent text-accent-foreground'
@@ -195,13 +195,13 @@ export const Navbar03 = React.forwardRef<HTMLElement, Navbar03Props>(
             {/* Main nav */}
             <div className="flex items-center gap-6">
               <button
-                onClick={(e) => e.preventDefault()}
+                onClick={(e: React.MouseEvent) => e.preventDefault()}
                 className="flex items-center space-x-2 text-primary hover:text-primary/90 transition-colors cursor-pointer"
               >
                 {/* <div className="text-2xl">
                   {logo}
                 </div> */}
-                <span className="hidden font-bold text-xl sm:inline-block text-white">NUCLEUS</span>
+                <span className="hidden font-lilita font-bold text-2xl sm:inline-block text-white">NUCLEUS</span>
               </button>
               {/* Navigation menu */}
               {!isMobile && (
@@ -211,7 +211,7 @@ export const Navbar03 = React.forwardRef<HTMLElement, Navbar03Props>(
                       <NavigationMenuItem key={index}>
                         <NavigationMenuLink
                           href={link.href}
-                          onClick={(e) => e.preventDefault()}
+                          onClick={(e: React.MouseEvent) => e.preventDefault()}
                           className={cn(
                             'group inline-flex h-10 w-max items-center justify-center rounded-md bg-[#191265] text-white px-4 py-2 text-sm font-medium transition-colors hover:bg-[#191265] hover:text-white focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 cursor-pointer relative',
                             'before:absolute before:bottom-0 before:left-0 before:right-0 before:h-0.5 before:bg-white before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100',
